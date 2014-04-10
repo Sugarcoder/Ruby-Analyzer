@@ -1,0 +1,2 @@
+# Ruby automatically places any parameters that are appended to the command line 
+# when you launch the Ruby program into a special array called ARGV.
