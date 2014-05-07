@@ -7,7 +7,7 @@ line_count = 0
 File.open("rubyprincess.txt").each { |line| line_count += 1 }
 puts line_count  
 
-# Answer will come out to be 0 => nil
+# Answer will come out to be 0 
 
 
 
@@ -22,7 +22,7 @@ end
 puts #{line_count} lines" 
 
 
-# Answer will be 0 lines => nil
+# Answer will be 0 lines 
 
 
 
@@ -137,7 +137,7 @@ test = %q{
 	No evil villain gets away with his crimes. 
 }
 
-puts test.split(/\n\n/).length        # Answer will be 3 => nil
+puts test.split(/\n\n/).length        # Answer will be 3 
 
 
 
@@ -181,7 +181,7 @@ keywords = words.select { |word| !stopwords.include?(word) }       # Answer will
 
 
 
-puts keywords.join(' ')     # Answer will be "I princess Ruby Ruby Land"   => nil
+puts keywords.join(' ')     # Answer will be "I princess Ruby Ruby Land"   
 
 
 
