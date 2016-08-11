@@ -9,8 +9,6 @@ puts line_count
 
 # Answer will come out to be 0 
 
-
-
 text = ''                # text is a variable used here
 line_count = 0
 File.open("rubyprincess.txt").each do |line|
@@ -21,31 +19,19 @@ end
 
 puts #{line_count} lines" 
 
-
 # Answer will be 0 lines 
-
-
-
 
 
 
 # COUNTING CHARACTERS:
 
-
 total_characters = text.length
 
 puts "#{total_characters} characters"        # Answer will be 0 characters
 
-
-
-
-
 # In the command prompt, if you run "rubyprincess.rb", 
 # then you will be able to see how many lines and characters are in the "rubyprincess.txt" file.
 # Answer is 10 lines, 515 characters.
-
-
-
 
 
 # This is counting the characters w/o spaces:
@@ -55,22 +41,16 @@ puts   "#{total_character_nospace} characters excluding spaces"
 
 # gsub = global substitution (search and replace)
 
-
 # Answer will be 414 characters excluding spaces
 
 
-
-
-
 # COUNTING WORDS: 
-
 
 puts "You are a hero".scan(/\w/).join               # Answer will be "Youareahero"
 
 puts "You are a hero".scan(/\w+/).join('-')         # Answer will be "You-are-a-hero"
 
 puts "You are a hero".scan(/\w+/).length            # Answer will be 4
-
 
 
 # SPLIT:
@@ -80,9 +60,6 @@ puts "You are a hero".scan(/\w+/).length            # Answer will be 4
 # "Split" literally breaks the string into parts. 
 
 
-
-
-
 # TO SCAN AND SPLIT:
 
 text = "You are such an awesome person."           
@@ -90,9 +67,7 @@ puts "Scan method: #{text.scan(/\w+/).length}"          # Answer will be 6
 puts "Scan method: #{text.split.length}"                # Answer will be 6
 
 
-
 # / / = The delimiters for a regular expression. It actually starts with \
-
 
 
 # TO COUNT THE WORDS:
@@ -100,12 +75,7 @@ puts "Scan method: #{text.split.length}"                # Answer will be 6
 word_count = text.split.length
 puts "#{word_count} words"
 
-
 # Answer will be  10, 515 characters, 414 characters excluding spaces, 91 words.
-
-
-
-
 
 
 # COUNTING SENTENCES: 
@@ -113,14 +83,11 @@ puts "#{word_count} words"
 # Sentences end with full stops, question marks, and exclamation marks.
 
 
-
 sentence_count = text.split(/\.|\?|!/).length
 puts "#{sentence_count} sentences"
 
 
 # | = Each | is treated separately (like a split). 
-
-
 
 
 # COUNTING PARAGRAPHS: 
@@ -140,14 +107,8 @@ test = %q{
 puts test.split(/\n\n/).length        # Answer will be 3 
 
 
-
-
 paragraph_count = test.split(/\n\n/).length
 puts "#{paragraph_count} paragraphs"
-
-
-
-
 
 
 # CALCULATING AVERAGES:
@@ -155,10 +116,6 @@ puts "#{paragraph_count} paragraphs"
 puts "#{sentence_count / paragraph_count} sentences per paragraph (average)"
 
 puts "#{word_count / sentence_count} words per sentence (average)"
-
-
-
-
 
 
 
@@ -179,18 +136,12 @@ stopwords = %w{am from}
 words = text.scan(/\w+/)                # Answer will be ["I", "am", "princess",.....]
 keywords = words.select { |word| !stopwords.include?(word) }       # Answer will be ["I", "princess", "Ruby", "Ruby", "Land"]
 
-
-
 puts keywords.join(' ')     # Answer will be "I princess Ruby Ruby Land"   
-
-
 
 
 ((keywords.length.to_f / words.length.to_f) * 100).to_i           # Answer will be 71
 
 # You are simply dividing it, then multiplying by 100.
-
-
 
 
  text = %q{
@@ -203,7 +154,6 @@ puts keywords.join(' ')     # Answer will be "I princess Ruby Ruby Land"
  }
  
  
- 
  sentences = text.gsub(/\s+/,' ').strip.split(/\.|\?|!/)
  sentences_sorted = sentences.sort_by { |sentence| sentence.length }
  one_third = sentences_sorted.length / 3
@@ -211,9 +161,7 @@ puts keywords.join(' ')     # Answer will be "I princess Ruby Ruby Land"
  ideal_sentences = ideal_sentences.select { |sentence| sentence =~/is|are/ }
  
  
- 
 puts ideal_sentences.join(". ")
-
 
 
 # "gsub" = Gets rid of all large areas of whitespace and replaces them with a single space.
@@ -225,23 +173,6 @@ puts ideal_sentences.join(". ")
 # "Slice" = Cuts out a section of the array to assign to "ideal_sentences".
 
 # "Join" = Joinse the "ideal_sentences" together with a full stop and space between them to make them readable.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
